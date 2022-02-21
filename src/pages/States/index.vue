@@ -5,7 +5,7 @@
       </div>
       
       <div v-if="loaded">
-          <SelectBox :placeholder="$t('chooseItem')" :search="false" :multiple="true" v-model="selectedOption" :dataSource="dataSource" :width="300">
+          <SelectBox :searchPlaceholder="$t('search')" :placeholder="$t('chooseItem')" :search="false" :multiple="false" v-model="selectedOption" :dataSource="dataSource" :width="300">
             <template slot="header" slot-scope="slotProps">
              {{slotProps.option.text || $t('chooseItem')}}
             </template>

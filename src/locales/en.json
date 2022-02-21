@@ -6,5 +6,6 @@
   "loading": "Loading...",
   "nothingWasFound": "Nothing was found",
   "empty": "Empty",
-  "chooseItem": "Choose item"
+  "chooseItem": "Choose item",
+  "search": "Search"
 }

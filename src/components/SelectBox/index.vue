@@ -53,11 +53,11 @@
           v-if="search"
           v-model="searchValue"
           @input="searching"
-          placeholder="Search ..."
+          :placeholder="searchPlaceholder"
           class="select-search-input"
         />
         <div v-show="isEmpty" class="select-empty">
-          <slot name="empty"> {{$t('nothingWasFound')}}</slot>
+          <slot name="empty"> Nothing was found</slot>
         </div>
 
         <div>
@@ -81,6 +81,10 @@ export default {
     placeholder: {
       type: String,
       default: "Choose item"
+    },
+    searchPlaceholder: {
+      type: String,
+      default: "Search..."
     },
     dataSource: {
       type: Array,
