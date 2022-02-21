@@ -2,6 +2,10 @@
 # Why did I choose Vue?
 I'm more used to work with Vue or React rather than angular. Vue is also smaller and not as complex as Angular JS. It's also worth noting that Angular JS has discontinued long term support.
 
+# Install & run
+```
+npm install && npm start
+```
 # Model
 This is the model structure to for the SelectBox
 ```
