@@ -113,6 +113,7 @@ export default {
     };
   },
   mounted() {
+    this.selected = "";
     this.selectedMultiple = [];
   },
   computed: {

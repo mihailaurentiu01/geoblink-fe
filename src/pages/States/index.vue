@@ -20,7 +20,9 @@
       <div v-else>
         <p>{{$t('loading')}}</p>
       </div>
-
+        <div>
+          Selected => {{Array.isArray(displaySelectedOption) ? displaySelectedOption : displaySelectedOption.value}}
+        </div>
     </div>    
 </template>
 
@@ -33,6 +35,11 @@ export default {
     SelectBox
   },
   computed: {
+    displaySelectedOption() {
+      return this.selectedOption !== null && Array.isArray(this.selectedOption)
+        ? this.selectedOption.flatMap(el => el.value)
+        : this.selectedOption;
+    },
     ...mapGetters("countries", ["getStatesModel"])
   },
   async mounted() {
@@ -52,7 +59,7 @@ export default {
   },
   data() {
     return {
-      selectedOption: null,
+      selectedOption: "",
       dataSource: [],
       loaded: false,
       errors: []
