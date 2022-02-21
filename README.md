@@ -1,30 +1,42 @@
-# geoblink-fe-vue
 
-This is the Vue.js template for Geoblink's Frontend position exercise.
+# Why did I choose Vue?
+I'm more used to work with Vue or React rather than angular. Vue is also smaller and not as complex as Angular JS. It's also worth noting that Angular JS has discontinued long term support.
 
-## Project structure
-
-You can safely **ignore** these folders:
-
-- `backend`
-- `build`
-- `config`
-
-The only files you should modify are in `src` folder.
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm i
-
-# serve with hot reload at localhost:5001 (backend at localhost:5002)
-npm start
+# Model
+This is the model structure to for the SelectBox
+```
+[
+{
+  value: 'ST', text: 'Striker',
+},
+{
+  value: 'CAM', text: 'Center attack midfield',
+},
+{
+  value: 'CF', text: 'Center Forward'
+}
+]
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+The text is displayed by default (although you can change that) and the value represents the key of the object.
 
-## About the backend
+Depending if **multiple** is enabled your v-model variable may be an object or an Array containg the multiple selected options
 
-Any request to the backend will return the list of states after a delay of 1 second.
-Note that they might fail randomly.
+# Props
+These are the props of the SelectBox component:
+| Prop     | Type      | Description     | Default |
+| ------------- | ------------- | -------- | -------- |
+| placeholder          | String         | Input placeholder  | 'Choose Item' |
+| dataSource           | Array         | Model data source  |[] |
+| search           | Boolean         | Whether filtering is enabled or not  |false |
+| multiple           | Boolean         | Whether multiple choice is enabled or not  |false |
+| width           | Number         | The input width in px |300 |
+
+# Slots
+These are the available slots which enables customization of the component
+
+| Slot     | Type      | Description     | Default |
+| ------------- | ------------- | -------- | -------- |
+| header          | Scoped Slot         | Specify the input header/title (chosen option)  | Displays selected item text |
+| item           | Scoped Slot         | Specify the item shown on the list  |Displays the item text |
+| empty           | Slot         | Specify the message when data source is empty (or filtering returns 0 results)  |'Nothing was found' |
