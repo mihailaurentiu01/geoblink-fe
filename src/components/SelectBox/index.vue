@@ -84,7 +84,7 @@ export default {
     },
     dataSource: {
       type: Array,
-      default: () => {}
+      default: () => []
     },
     search: {
       type: Boolean,
@@ -96,7 +96,7 @@ export default {
     },
     width: {
       type: Number,
-      default: 400
+      default: 300
     }
   },
   data() {
