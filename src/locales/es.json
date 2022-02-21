@@ -1,0 +1,10 @@
+{
+  "message": "Mensaje",
+  "errors": {
+    "status500": "Ha habido un problema al recoger los datos."
+  },
+  "loading": "Cargando...",
+  "nothingWasFound": "No se ha encontrado nada",
+  "empty": "Vacío",
+  "chooseItem": "Elija un elemento"
+}
