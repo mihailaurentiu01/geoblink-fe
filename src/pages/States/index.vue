@@ -21,7 +21,7 @@
         <p>{{$t('loading')}}</p>
       </div>
         <div>
-          Selected => {{Array.isArray(displaySelectedOption) ? displaySelectedOption : displaySelectedOption.value}}
+          {{$t('selected')}} => {{Array.isArray(displaySelectedOption) ? displaySelectedOption : displaySelectedOption.value}}
         </div>
     </div>    
 </template>
