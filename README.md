@@ -33,6 +33,7 @@ These are the props of the SelectBox component:
 | Prop     | Type      | Description     | Default |
 | ------------- | ------------- | -------- | -------- |
 | placeholder          | String         | Input placeholder  | 'Choose Item' |
+| searchPlaceholder           | String         | Search input placeholder | 'Search...' |
 | dataSource           | Array         | Model data source  |[] |
 | search           | Boolean         | Whether filtering is enabled or not  |false |
 | multiple           | Boolean         | Whether multiple choice is enabled or not  |false |
