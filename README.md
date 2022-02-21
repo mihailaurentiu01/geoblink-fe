@@ -2,6 +2,10 @@
 # Why did I choose Vue?
 I'm more used to work with Vue or React rather than angular. Vue is also smaller and not as complex as Angular JS. It's also worth noting that Angular JS has discontinued long term support.
 
+# Install & run
+```
+npm install && npm start
+```
 # Model
 This is the model structure to for the SelectBox
 ```
@@ -19,6 +23,8 @@ This is the model structure to for the SelectBox
 ```
 
 The text is displayed by default (although you can change that) and the value represents the key of the object.
+
+**Default locale is es**
 
 Depending if **multiple** is enabled your v-model variable may be an object or an Array containg the multiple selected options
 
